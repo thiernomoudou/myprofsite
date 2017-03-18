@@ -1,0 +1,14 @@
+{% extends 'base.html'%}
+{%block content%}
+{% if all_contact %}
+<h1> here is a list of my contact </h1>
+<ul>
+      {% for content in all_contact %}
+      <li> Name: {{content.name}} Email: {{content.email}} Message: {{content.message}}</li>
+      {% endfor %}
+</ul>
+
+{% else %}
+<h3>No communication yet</h3>
+{% endif %}
+{%endblock%}
